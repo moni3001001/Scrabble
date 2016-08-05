@@ -19,10 +19,17 @@ public class Scrabble {
 			
 			public int scoreLetter(char c){
 				switch(c){
-				case 'A':
+				case 'a':
 					return 1;
-				case 'B'
-				}
+				case 'b':
+					return 8;
+				case 'c':
+					return 3;
+				case 'd':
+					return 2;
+				case 'e':
+					return 1;
+					
 			}
 			
 			public int maxScore(){
@@ -31,7 +38,7 @@ public class Scrabble {
 			
 			
 			public static void main(String args[]){
-				string input = "SCHOOLS";
+				string input = "schools";
 				String filePath = "C:\\Users\\subhargava\\Downloads\\sowpods.txt";
 				ArrayList<String> dictionary = new ArrayList<String> ();
 				dictionary = readFile(filePath);
