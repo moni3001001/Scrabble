@@ -32,9 +32,27 @@ public class Scrabble {
 					
 			}
 			
-			public int maxScore(){
-				return score;
-			}
+				public int totalScore(String s){
+					int score=0;
+					for(int i=0;i<s.length();i++)
+						score += scoreLetter(s.charAt(i));
+					return score;
+				}
+				
+				public int maxScore(ArrayList<String> dict){
+					String temp = this.letters;
+					int maxScore=0;
+					Set<String> permute;
+				
+					for(int i=0;i<len;i++){
+					permute = Permutations.permutationFinder(temp);
+						for(int k=0;k<permute.size();k++){
+						maxScore = totalScore(temp);
+							if(isValid(temp, dict))
+								return maxScore;
+						}
+					return maxScore;
+				}
 			
 			
 			public static void main(String args[]){
